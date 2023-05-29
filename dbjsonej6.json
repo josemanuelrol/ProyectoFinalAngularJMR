@@ -1,0 +1,31 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Marta",
+      "apellidos": "Lopez",
+      "email": "marta@gmail.com",
+      "phone": "454545",
+      "password": "lopez",
+      "image": "https://robohash.org/Marta"
+    },
+    {
+      "id": 2,
+      "nombre": "Manolo",
+      "apellidos": "Garcia",
+      "email": "manolo@gmail.com",
+      "phone": "344523",
+      "password": "garcia",
+      "image": "https://robohash.org/Manolo"
+    },
+    {
+      "nombre": "Jose Manuel",
+      "apellidos": "Roldán Sousa",
+      "email": "josemanuelrol2004@gmail.com",
+      "phone": "644373442",
+      "password": "12345",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/radical-sr3-xx-1-1591430409.jpg",
+      "id": 3
+    }
+  ]
+}

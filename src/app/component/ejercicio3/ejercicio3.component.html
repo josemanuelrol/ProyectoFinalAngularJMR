@@ -1,1 +1,13 @@
-<p>ejercicio3 works!</p>
+<div class="container mt-2 shadow-lg rounded p-2">
+  <h3 class="my-3 text-center">Listado de empleados</h3>
+  <div class="row p-3 justify-content-center">
+    <div class="list-group my-3 col-4">
+      <a routerLink="/detalle/{{empleado.id}}" routerLinkActive="active" class="list-group-item list-group-item-action" *ngFor="let empleado of empleados">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{empleado.first_name}} <small>{{empleado.last_name}}</small></h5>
+          <img src="{{empleado.image}}" class="img-thumbnail rounded" alt="..." width="100" height="100">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

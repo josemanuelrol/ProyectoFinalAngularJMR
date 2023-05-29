@@ -1,1 +1,66 @@
-<p>ejercicio1 works!</p>
+<div class="container">
+  <h2>CRUD local. Datos locales. Sin BD</h2>
+
+  <div class="row">
+    <div class="col-12">
+
+      <table class="table table-striped">
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Edad</th>
+          <th>Idioma</th>
+          <th>Acciones</th>
+        </tr>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.email }}</td>
+          <td>{{ usuario.edad }}</td>
+          <td>{{ usuario.idioma }}</td>
+          <td>
+            <button class="btn btn-outline-warning" (click)="seleccionarUsuario(usuario)">Seleccionar</button>
+            <button class="btn btn-outline-danger" (click)="borrarUsuario(usuario)">Borrar</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center">
+
+    <div class="col-8 p-4">
+
+      <h3>Agregar Usuario</h3>
+
+      <div>
+        <label>Id:</label>
+        <input class="form-control" type="number" [(ngModel)]="nuevoUsuario.id" required>
+      </div>
+      <div>
+        <label>Nombre:</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.nombre" required>
+      </div>
+      <div>
+        <label>Email:</label>
+        <input class="form-control" type="email" [(ngModel)]="nuevoUsuario.email" required>
+      </div>
+      <div>
+        <label>Edad:</label>
+        <input class="form-control" type="number" [(ngModel)]="nuevoUsuario.edad" required>
+      </div>
+      <div>
+        <label>Idioma:</label>
+        <input class="form-control" type="text" [(ngModel)]="nuevoUsuario.idioma" required>
+      </div>
+
+      <button class="btn btn-success m-2" (click)="agregarEditarUsuario()" [disabled]="!esFormularioValido()" >Guardar</button>
+      <button class="btn btn-info m-2" (click)="cancelarEdicion()">Cancelar</button>
+
+    </div>
+
+  </div>
+</div>

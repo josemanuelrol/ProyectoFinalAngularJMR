@@ -1,1 +1,38 @@
-<p>ejercicio4 works!</p>
+<div class="container mt-2 shadow-lg rounded p-2">
+  <h2>ANGULAR - JSON-SERVER (CRUD)</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fruta of frutas">
+        <td>{{fruta.id}}</td>
+        <td>{{fruta.descripcion}}</td>
+        <td>{{fruta.precio}}</td>
+        <td>
+          <button class="btn btn-warning btn-sm m-1" (click)="seleccionar(fruta)">Editar</button>
+          <button class="btn btn-danger btn-sm m-1" (click)="borrar(fruta.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form>
+    <div class="mb-3 form-group">
+      <label for="descripcion">Descripción:</label>
+      <input type="text" class="form-control" id="descripcion" [(ngModel)]="fruta.descripcion" name="descripcion">
+    </div>
+    <div class="mb-3 form-group">
+      <label for="precio">Precio:</label>
+      <input type="number" class="form-control" id="precio" [(ngModel)]="fruta.precio" name="precio">
+    </div>
+    <button class="btn btn-primary m-1" (click)="insertar()">Insertar</button>
+    <button class="btn btn-success m-1" (click)="modificar(fruta.id)">Modificar</button>
+  </form>
+</div>
